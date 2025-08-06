@@ -1,11 +1,15 @@
-import { courseMetadata } from './courseMetadata.js'
-import { instructor } from './instructor.js'
-import { courseCategory } from './courseCategory.js'
-import { testimonial } from './testimonial.js'
+import courseMetadata from './courseMetadata.js'
+import author from './author.js'
+import blockContent from './blockContent.js'
+import category from './category.js'
+import post from './post.js'
+import seo from './seo.js'
 
 export const schemaTypes = [
   courseMetadata,
-  instructor,
-  courseCategory,
-  testimonial
+  post,
+  author,
+  category,
+  blockContent,
+  seo,
 ]
