@@ -1,455 +1,244 @@
-import { defineField, defineType } from 'sanity'
-
-export default defineType({
+export default {
   name: 'courseMetadata',
-  title: 'Course Metadata',
   type: 'document',
+  title: 'Course Metadata',
   fields: [
-    // Basic Information
-    defineField({
+    {
       name: 'slug',
-      title: 'Course Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-      validation: Rule => Rule.required(),
-      description: 'URL slug for the course (e.g., "workday-training-in-hyderabad")'
-    }),
-    
-    defineField({
+      title: 'Slug',
+      description: 'URL slug for the course page',
+      validation: Rule => Rule.required()
+    },
+    {
       name: 'title',
-      title: 'Course Title',
       type: 'string',
-      validation: Rule => Rule.required(),
-      description: 'Main page title for SEO and display'
-    }),
-    
-    defineField({
+      title: 'Title',
+      description: 'Page title for SEO'
+    },
+    {
       name: 'description',
-      title: 'Course Description',
       type: 'text',
-      rows: 4,
-      validation: Rule => Rule.required(),
-      description: 'Main description of the course'
-    }),
-    
-    // SEO Settings
-    defineField({
-      name: 'seo',
-      title: 'SEO Settings',
-      type: 'object',
-      fields: [
-        {
-          name: 'keywords',
-          title: 'SEO Keywords',
-          type: 'array',
-          of: [{ type: 'string' }],
-          options: {
-            layout: 'tags'
-          },
-          description: 'Keywords for SEO optimization'
-        },
-        {
-          name: 'ogTitle',
-          title: 'Open Graph Title',
-          type: 'string',
-          description: 'Title for social media sharing'
-        },
-        {
-          name: 'ogDescription',
-          title: 'Open Graph Description',
-          type: 'text',
-          rows: 3,
-          description: 'Description for social media sharing'
-        },
-        {
-          name: 'ogUrl',
-          title: 'Open Graph URL',
-          type: 'string',
-          description: 'Canonical URL for Open Graph'
-        },
-        {
-          name: 'ogImage',
-          title: 'Open Graph Image',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative Text',
-            }
-          ],
-          description: 'Image for social media sharing'
-        },
-        {
-          name: 'ogImageUrl',
-          title: 'Open Graph Image URL (Legacy)',
-          type: 'string',
-          description: 'Image URL path (for existing data compatibility)'
-        },
-        {
-          name: 'twitterTitle',
-          title: 'Twitter Title',
-          type: 'string',
-          description: 'Title for Twitter cards'
-        },
-        {
-          name: 'twitterDescription',
-          title: 'Twitter Description',
-          type: 'text',
-          rows: 3,
-          description: 'Description for Twitter cards'
-        },
-        {
-          name: 'twitterUrl',
-          title: 'Twitter URL',
-          type: 'string',
-          description: 'Canonical URL for Twitter'
-        },
-        {
-          name: 'twitterImage',
-          title: 'Twitter Image',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative Text',
-            }
-          ],
-          description: 'Image for Twitter cards'
-        },
-        {
-          name: 'twitterImageUrl',
-          title: 'Twitter Image URL (Legacy)',
-          type: 'string',
-          description: 'Image URL path (for existing data compatibility)'
-        }
-      ]
-    }),
-    
-    // Course Categories
-    defineField({
-      name: 'category',
-      title: 'Course Category',
+      title: 'Description',
+      description: 'Meta description for SEO'
+    },
+    {
+      name: 'keywords',
+      type: 'array',
+      title: 'Keywords',
+      description: 'SEO keywords',
+      of: [{type: 'string'}]
+    },
+    {
+      name: 'ogTitle',
       type: 'string',
-      options: {
-        list: [
-          { title: 'SAP', value: 'SAP' },
-          { title: 'Cloud & DevOps', value: 'Cloud & DevOps' },
-          { title: 'Data Science', value: 'Data Science' },
-          { title: 'Programming', value: 'Programming' },
-          { title: 'CRM', value: 'CRM' },
-          { title: 'BPM', value: 'BPM' },
-          { title: 'Data Integration', value: 'Data Integration' },
-          { title: 'Technology', value: 'Technology' },
-          { title: 'Machine Learning', value: 'Machine Learning' },
-          { title: 'Business Intelligence', value: 'Business Intelligence' }
-        ]
-      }
-    }),
-    
-    // Course Details
-    defineField({
-      name: 'courseDetails',
-      title: 'Course Details',
-      type: 'object',
-      fields: [
-        {
-          name: 'duration',
-          title: 'Course Duration',
-          type: 'string',
-          description: 'e.g., "45 days", "3 months"'
-        },
-        {
-          name: 'mode',
-          title: 'Training Mode',
-          type: 'array',
-          of: [{ type: 'string' }],
-          options: {
-            list: [
-              { title: 'Online', value: 'Online' },
-              { title: 'Classroom', value: 'Classroom' },
-              { title: 'Hybrid', value: 'Hybrid' },
-              { title: 'Corporate', value: 'Corporate' },
-              { title: 'Weekend', value: 'Weekend' }
-            ]
-          },
-          description: 'Available training modes'
-        },
-        {
-          name: 'level',
-          title: 'Skill Level',
-          type: 'string',
-          options: {
-            list: [
-              'Beginner', 
-              'Intermediate', 
-              'Advanced', 
-              'Beginner to Advanced'
-            ]
-          }
-        },
-        {
-          name: 'language',
-          title: 'Language',
-          type: 'string',
-          initialValue: 'English'
-        },
-        {
-          name: 'certification',
-          title: 'Certification Available',
-          type: 'boolean',
-          initialValue: true
-        },
-        {
-          name: 'placementAssistance',
-          title: 'Placement Assistance',
-          type: 'boolean',
-          initialValue: true
-        }
-      ]
-    }),
-    
-    // Pricing Information
-    defineField({
-      name: 'pricing',
-      title: 'Pricing Information',
-      type: 'object',
-      fields: [
-        {
-          name: 'price',
-          title: 'Regular Price',
-          type: 'number',
-          validation: Rule => Rule.min(0)
-        },
-        {
-          name: 'discountedPrice',
-          title: 'Discounted Price',
-          type: 'number',
-          validation: Rule => Rule.min(0)
-        },
-        {
-          name: 'currency',
-          title: 'Currency',
-          type: 'string',
-          options: {
-            list: ['INR', 'USD', 'EUR']
-          },
-          initialValue: 'INR'
-        }
-      ]
-    }),
-    
-    // Reviews and Ratings
-    defineField({
-      name: 'reviews',
-      title: 'Reviews and Ratings',
-      type: 'object',
-      fields: [
-        {
-          name: 'reviewCount',
-          title: 'Review Count',
-          type: 'string',
-          description: 'Number of reviews (as string for large numbers)'
-        },
-        {
-          name: 'ratingValue',
-          title: 'Rating Value',
-          type: 'string',
-          options: {
-            list: ['1', '2', '3', '4', '5']
-          },
-          initialValue: '5'
-        }
-      ]
-    }),
-    
-    // Location Information
-    defineField({
-      name: 'location',
-      title: 'Location Information',
-      type: 'object',
-      fields: [
-        {
-          name: 'streetAddress',
-          title: 'Street Address',
-          type: 'text',
-          rows: 2,
-          initialValue: '506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.'
-        },
-        {
-          name: 'postalCode',
-          title: 'Postal Code',
-          type: 'string',
-          initialValue: '500073'
-        },
-        {
-          name: 'city',
-          title: 'City',
-          type: 'string',
-          initialValue: 'Hyderabad'
-        },
-        {
-          name: 'state',
-          title: 'State',
-          type: 'string',
-          initialValue: 'Telangana'
-        },
-        {
-          name: 'country',
-          title: 'Country',
-          type: 'string',
-          initialValue: 'India'
-        }
-      ]
-    }),
-    
-    // Structured Data for SEO
-    defineField({
+      title: 'Open Graph Title',
+      description: 'Title for social media sharing'
+    },
+    {
+      name: 'ogDescription',
+      type: 'text',
+      title: 'Open Graph Description',
+      description: 'Description for social media sharing'
+    },
+    {
+      name: 'twitterTitle',
+      type: 'string',
+      title: 'Twitter Title',
+      description: 'Title for Twitter cards'
+    },
+    {
+      name: 'twitterDescription',
+      type: 'text',
+      title: 'Twitter Description',
+      description: 'Description for Twitter cards'
+    },
+    {
+      name: 'ogImage',
+      type: 'string',
+      title: 'Open Graph Image',
+      description: 'Image path for social media sharing'
+    },
+    {
+      name: 'twitterImage',
+      type: 'string',
+      title: 'Twitter Image',
+      description: 'Image path for Twitter cards'
+    },
+    {
+      name: 'ogUrl',
+      type: 'string',
+      title: 'Open Graph URL',
+      description: 'Canonical URL for social media'
+    },
+    {
+      name: 'twitterUrl',
+      type: 'string',
+      title: 'Twitter URL',
+      description: 'URL for Twitter cards'
+    },
+    {
+      name: 'canonical',
+      type: 'string',
+      title: 'Canonical URL',
+      description: 'Canonical URL for SEO'
+    },
+    {
+      name: 'hreflang',
+      type: 'string',
+      title: 'Hreflang',
+      description: 'Language and region targeting'
+    },
+    {
+      name: 'reviewCount',
+      type: 'string',
+      title: 'Review Count',
+      description: 'Number of reviews for structured data'
+    },
+    {
+      name: 'ratingValue',
+      type: 'string',
+      title: 'Rating Value',
+      description: 'Rating score for structured data'
+    },
+    {
+      name: 'organizationName',
+      type: 'string',
+      title: 'Organization Name',
+      description: 'Name of the organization'
+    },
+    {
+      name: 'postalCode',
+      type: 'string',
+      title: 'Postal Code',
+      description: 'Business postal code'
+    },
+    {
+      name: 'streetAddress',
+      type: 'string',
+      title: 'Street Address',
+      description: 'Complete street address'
+    },
+    {
       name: 'structuredData',
-      title: 'Structured Data',
       type: 'object',
+      title: 'Structured Data',
+      description: 'Schema.org structured data',
       fields: [
+        {
+          name: 'context',
+          type: 'string',
+          title: '@context',
+          initialValue: 'http://schema.org'
+        },
         {
           name: 'type',
-          title: 'Schema Type',
           type: 'string',
-          options: {
-            list: [
-              { title: 'Course', value: 'Course' },
-              { title: 'LocalBusiness', value: 'LocalBusiness' },
-              { title: 'EducationalOrganization', value: 'EducationalOrganization' }
-            ]
-          },
-          initialValue: 'Course'
+          title: '@type',
+          initialValue: 'LocalBusiness'
         },
         {
-          name: 'courseCode',
-          title: 'Course Code',
-          type: 'string'
+          name: 'name',
+          type: 'string',
+          title: 'Name'
         },
         {
-          name: 'provider',
-          title: 'Course Provider',
+          name: 'url',
           type: 'string',
-          initialValue: 'VR IT Solutions'
+          title: 'URL'
         },
         {
-          name: 'organizationName',
-          title: 'Organization Name',
+          name: 'logo',
           type: 'string',
-          description: 'Full organization name for structured data'
-        }
-      ]
-    }),
-    
-    // Course Features and Benefits
-    defineField({
-      name: 'features',
-      title: 'Course Features',
-      type: 'array',
-      of: [{ type: 'string' }],
-      description: 'List of key features and benefits'
-    }),
-    
-    // FAQ Section
-    defineField({
-      name: 'faq',
-      title: 'Frequently Asked Questions',
-      type: 'array',
-      of: [
+          title: 'Logo'
+        },
         {
+          name: 'sameAs',
+          type: 'array',
+          title: 'Same As',
+          description: 'Social media and other profile URLs',
+          of: [{type: 'string'}]
+        },
+        {
+          name: 'address',
           type: 'object',
+          title: 'Address',
           fields: [
             {
-              name: 'question',
-              title: 'Question',
-              type: 'string'
+              name: 'type',
+              type: 'string',
+              title: '@type',
+              initialValue: 'PostalAddress'
             },
             {
-              name: 'answer',
-              title: 'Answer',
-              type: 'text',
-              rows: 4
+              name: 'addressCountry',
+              type: 'string',
+              title: 'Address Country'
+            },
+            {
+              name: 'addressLocality',
+              type: 'string',
+              title: 'Address Locality'
+            },
+            {
+              name: 'addressRegion',
+              type: 'string',
+              title: 'Address Region'
+            },
+            {
+              name: 'postalCode',
+              type: 'string',
+              title: 'Postal Code'
+            },
+            {
+              name: 'streetAddress',
+              type: 'string',
+              title: 'Street Address'
+            }
+          ]
+        },
+        {
+          name: 'openingHours',
+          type: 'array',
+          title: 'Opening Hours',
+          description: 'Business operating hours',
+          of: [{type: 'string'}]
+        },
+        {
+          name: 'contactPoint',
+          type: 'array',
+          title: 'Contact Points',
+          description: 'Business contact information',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  name: 'type',
+                  type: 'string',
+                  title: '@type',
+                  initialValue: 'ContactPoint'
+                },
+                {
+                  name: 'telephone',
+                  type: 'string',
+                  title: 'Telephone'
+                },
+                {
+                  name: 'contactType',
+                  type: 'string',
+                  title: 'Contact Type'
+                },
+                {
+                  name: 'email',
+                  type: 'string',
+                  title: 'Email'
+                }
+              ]
             }
           ]
         }
       ]
-    }),
-    
-    // Course Content
-    defineField({
-      name: 'detailedContent',
-      title: 'Detailed Course Content',
-      type: 'blockContent',
-      description: 'Rich text content for the course page'
-    }),
-    
-    // Status and Visibility
-    defineField({
-      name: 'isActive',
-      title: 'Active Course',
-      type: 'boolean',
-      initialValue: true,
-      description: 'Toggle to show/hide this course'
-    }),
-    
-    defineField({
-      name: 'isFeatured',
-      title: 'Featured Course',
-      type: 'boolean',
-      initialValue: false,
-      description: 'Mark as featured course'
-    }),
-    
-    // Publishing Information
-    defineField({
-      name: 'publishedAt',
-      title: 'Published Date',
-      type: 'datetime',
-      options: {
-        dateFormat: 'YYYY-MM-DD',
-        timeFormat: 'HH:mm',
-        calendarTodayLabel: 'Today'
-      }
-    }),
-    
-    defineField({
-      name: 'updatedAt',
-      title: 'Last Updated',
-      type: 'datetime',
-      options: {
-        dateFormat: 'YYYY-MM-DD',
-        timeFormat: 'HH:mm',
-        calendarTodayLabel: 'Today'
-      }
-    })
-  ],
-  
-  preview: {
-    select: {
-      title: 'title',
-      subtitle: 'slug.current',
-      media: 'seo.ogImage',
-      isActive: 'isActive',
-      category: 'category'
-    },
-    prepare(selection) {
-      const { title, subtitle, isActive, category } = selection
-      return {
-        title: title,
-        subtitle: `${category || 'No Category'} | ${subtitle} ${isActive ? '✅' : '❌'}`,
-        media: selection.media
-      }
     }
-  }
-})
+  ]
+}
