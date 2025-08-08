@@ -29,6 +29,15 @@ export default {
       description: 'SEO keywords',
       of: [{type: 'string'}]
     },
+            {
+      name: 'mainImage',
+      type: 'image',
+      title: 'Main Image',
+      description: 'Main image for the course page',
+      options: {
+        hotspot: true
+      }
+    },
     {
       name: 'ogTitle',
       type: 'string',
@@ -55,15 +64,21 @@ export default {
     },
     {
       name: 'ogImage',
-      type: 'string',
+      type: 'image',
       title: 'Open Graph Image',
-      description: 'Image path for social media sharing'
+      description: 'Image for social media sharing (Open Graph)',
+      options: {
+        hotspot: true
+      }
     },
     {
       name: 'twitterImage',
-      type: 'string',
+      type: 'image',
       title: 'Twitter Image',
-      description: 'Image path for Twitter cards'
+      description: 'Image for Twitter cards',
+      options: {
+        hotspot: true
+      }
     },
     {
       name: 'ogUrl',
@@ -118,127 +133,6 @@ export default {
       type: 'string',
       title: 'Street Address',
       description: 'Complete street address'
-    },
-    {
-      name: 'structuredData',
-      type: 'object',
-      title: 'Structured Data',
-      description: 'Schema.org structured data',
-      fields: [
-        {
-          name: 'context',
-          type: 'string',
-          title: '@context',
-          initialValue: 'http://schema.org'
-        },
-        {
-          name: 'type',
-          type: 'string',
-          title: '@type',
-          initialValue: 'LocalBusiness'
-        },
-        {
-          name: 'name',
-          type: 'string',
-          title: 'Name'
-        },
-        {
-          name: 'url',
-          type: 'string',
-          title: 'URL'
-        },
-        {
-          name: 'logo',
-          type: 'string',
-          title: 'Logo'
-        },
-        {
-          name: 'sameAs',
-          type: 'array',
-          title: 'Same As',
-          description: 'Social media and other profile URLs',
-          of: [{type: 'string'}]
-        },
-        {
-          name: 'address',
-          type: 'object',
-          title: 'Address',
-          fields: [
-            {
-              name: 'type',
-              type: 'string',
-              title: '@type',
-              initialValue: 'PostalAddress'
-            },
-            {
-              name: 'addressCountry',
-              type: 'string',
-              title: 'Address Country'
-            },
-            {
-              name: 'addressLocality',
-              type: 'string',
-              title: 'Address Locality'
-            },
-            {
-              name: 'addressRegion',
-              type: 'string',
-              title: 'Address Region'
-            },
-            {
-              name: 'postalCode',
-              type: 'string',
-              title: 'Postal Code'
-            },
-            {
-              name: 'streetAddress',
-              type: 'string',
-              title: 'Street Address'
-            }
-          ]
-        },
-        {
-          name: 'openingHours',
-          type: 'array',
-          title: 'Opening Hours',
-          description: 'Business operating hours',
-          of: [{type: 'string'}]
-        },
-        {
-          name: 'contactPoint',
-          type: 'array',
-          title: 'Contact Points',
-          description: 'Business contact information',
-          of: [
-            {
-              type: 'object',
-              fields: [
-                {
-                  name: 'type',
-                  type: 'string',
-                  title: '@type',
-                  initialValue: 'ContactPoint'
-                },
-                {
-                  name: 'telephone',
-                  type: 'string',
-                  title: 'Telephone'
-                },
-                {
-                  name: 'contactType',
-                  type: 'string',
-                  title: 'Contact Type'
-                },
-                {
-                  name: 'email',
-                  type: 'string',
-                  title: 'Email'
-                }
-              ]
-            }
-          ]
-        }
-      ]
     }
   ]
 }
