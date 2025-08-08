@@ -39,6 +39,18 @@ export default {
       }
     },
     {
+      name: 'importantText',
+      type: 'string',
+      title: 'Important Text',
+      description: 'Text to display in the scrolling banner at the top of the website'
+    },
+    {
+      name: 'bannerUrl',
+      type: 'url',
+      title: 'Banner URL',
+      description: 'URL to redirect users when they click on the popup banner'
+    },
+    {
       name: 'ogTitle',
       type: 'string',
       title: 'Open Graph Title',
