@@ -145,6 +145,15 @@ export default {
       type: 'string',
       title: 'Street Address',
       description: 'Complete street address'
+    },
+    {
+      name: 'courseContentPdf',
+      type: 'file',
+      title: 'Course Content PDF',
+      description: 'PDF file containing course content/syllabus',
+      options: {
+        accept: '.pdf'
+      }
     }
   ]
 }
