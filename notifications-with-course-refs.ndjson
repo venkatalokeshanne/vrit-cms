@@ -1,0 +1,10 @@
+{"_type": "notification", "_id": "notification-1", "name": "Arjun Sharma", "location": "Bangalore", "type": "joined", "course": {"_type": "reference", "_ref": "data-science-training-in-hyderabad"}, "timeAgo": 2}
+{"_type": "notification", "_id": "notification-2", "name": "Priya Reddy", "location": "Hyderabad", "type": "placed", "course": {"_type": "reference", "_ref": "salesforce-training-in-hyderabad"}, "timeAgo": 5}
+{"_type": "notification", "_id": "notification-3", "name": "Vikash Kumar", "location": "Delhi", "type": "joined", "course": {"_type": "reference", "_ref": "python-online-training"}, "timeAgo": 3}
+{"_type": "notification", "_id": "notification-4", "name": "Sneha Patel", "location": "Mumbai", "type": "placed", "course": {"_type": "reference", "_ref": "azure-devops-training-in-hyderabad"}, "timeAgo": 7}
+{"_type": "notification", "_id": "notification-5", "name": "Rahul Singh", "location": "Pune", "type": "joined", "course": {"_type": "reference", "_ref": "machine-learning-with-python-training-in-hyderabad"}, "timeAgo": 1}
+{"_type": "notification", "_id": "notification-6", "name": "Kavitha Nair", "location": "Chennai", "type": "placed", "course": {"_type": "reference", "_ref": "full-stack-developer-training-in-hyderabad"}, "timeAgo": 4}
+{"_type": "notification", "_id": "notification-7", "name": "Aditya Gupta", "location": "Kolkata", "type": "joined", "course": {"_type": "reference", "_ref": "pega-training-in-hyderabad"}, "timeAgo": 6}
+{"_type": "notification", "_id": "notification-8", "name": "Roshni Agarwal", "location": "Jaipur", "type": "placed", "course": {"_type": "reference", "_ref": "workday-training-in-hyderabad"}, "timeAgo": 8}
+{"_type": "notification", "_id": "notification-9", "name": "Sunil Yadav", "location": "Lucknow", "type": "joined", "course": {"_type": "reference", "_ref": "devops-training-in-hyderabad"}, "timeAgo": 9}
+{"_type": "notification", "_id": "notification-10", "name": "Deepika Jain", "location": "Ahmedabad", "type": "placed", "course": {"_type": "reference", "_ref": "servicenow-training-in-hyderabad"}, "timeAgo": 10}

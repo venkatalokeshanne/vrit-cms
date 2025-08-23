@@ -1,3 +1,4 @@
+
 import author from './author.js'
 import blockContent from './blockContent.js'
 import category from './category.js'
@@ -5,6 +6,7 @@ import post from './post.js'
 import seo from './seo.js'
 import courseMetadata from './courseMetadata.js'
 import course from './course.js'
+import notification from './notification.js'
 
 export const schemaTypes = [
   course,
@@ -14,4 +16,5 @@ export const schemaTypes = [
   category,
   blockContent,
   seo,
+  notification,
 ]
