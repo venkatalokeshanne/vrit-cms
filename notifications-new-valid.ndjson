@@ -1,8 +1,0 @@
-{"_type": "notification", "_id": "notification-valid-1", "name": "Rajesh K.", "location": "Hyderabad", "type": "joined", "course": {"_type": "reference", "_ref": "imported-workday-training-in-hyderabad"}, "timeAgo": 2}
-{"_type": "notification", "_id": "notification-valid-2", "name": "Priya S.", "location": "Bangalore", "type": "placed", "course": {"_type": "reference", "_ref": "imported-machine-learning-with-python-training-in-hyderabad"}, "timeAgo": 5}
-{"_type": "notification", "_id": "notification-valid-3", "name": "Amit R.", "location": "Chennai", "type": "joined", "course": {"_type": "reference", "_ref": "imported-full-stack-developer-training-in-hyderabad"}, "timeAgo": 7}
-{"_type": "notification", "_id": "notification-valid-4", "name": "Neha M.", "location": "Mumbai", "type": "placed", "course": {"_type": "reference", "_ref": "imported-data-science-training-in-hyderabad"}, "timeAgo": 1}
-{"_type": "notification", "_id": "notification-valid-5", "name": "Rohit P.", "location": "Delhi", "type": "joined", "course": {"_type": "reference", "_ref": "imported-salesforce-training-in-hyderabad"}, "timeAgo": 3}
-{"_type": "notification", "_id": "notification-valid-6", "name": "Kavya T.", "location": "Pune", "type": "placed", "course": {"_type": "reference", "_ref": "imported-azure-devops-training-in-hyderabad"}, "timeAgo": 4}
-{"_type": "notification", "_id": "notification-valid-7", "name": "Suresh B.", "location": "Kolkata", "type": "joined", "course": {"_type": "reference", "_ref": "imported-python-online-training"}, "timeAgo": 6}
-{"_type": "notification", "_id": "notification-valid-8", "name": "Deepika V.", "location": "Ahmedabad", "type": "placed", "course": {"_type": "reference", "_ref": "imported-pega-training-in-hyderabad"}, "timeAgo": 8}

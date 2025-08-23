@@ -1,5 +1,0 @@
-{"_type": "notification", "_id": "notification-ref-1", "name": "Rajesh K.", "location": "Hyderabad", "type": "joined", "course": {"_type": "reference", "_ref": "courseMetadata-web-dev"}, "timeAgo": 2}
-{"_type": "notification", "_id": "notification-ref-2", "name": "Priya S.", "location": "Bangalore", "type": "placed", "course": {"_type": "reference", "_ref": "courseMetadata-data-science"}, "timeAgo": 5}
-{"_type": "notification", "_id": "notification-ref-3", "name": "Amit R.", "location": "Chennai", "type": "joined", "course": {"_type": "reference", "_ref": "courseMetadata-ui-ux"}, "timeAgo": 7}
-{"_type": "notification", "_id": "notification-ref-4", "name": "Neha M.", "location": "Mumbai", "type": "placed", "course": {"_type": "reference", "_ref": "courseMetadata-cloud"}, "timeAgo": 1}
-{"_type": "notification", "_id": "notification-ref-5", "name": "Rohit P.", "location": "Delhi", "type": "joined", "course": {"_type": "reference", "_ref": "courseMetadata-ai-ml"}, "timeAgo": 3}
