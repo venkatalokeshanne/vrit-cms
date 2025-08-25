@@ -154,6 +154,60 @@ export default {
       options: {
         accept: '.pdf'
       }
+    },
+    {
+      name: 'seoHeaders',
+      type: 'array',
+      title: 'SEO Headers',
+      description: 'Hidden H1-H6 tags for SEO optimization. These will be invisible to users but visible to search engines.',
+      of: [
+        {
+          type: 'object',
+          title: 'SEO Header',
+          fields: [
+            {
+              name: 'level',
+              type: 'number',
+              title: 'Header Level',
+              description: 'Choose header level (1-6). H1 is most important, H6 is least important.',
+              validation: Rule => Rule.required().min(1).max(6),
+              options: {
+                list: [
+                  {title: 'H1 - Most Important', value: 1},
+                  {title: 'H2 - Very Important', value: 2},
+                  {title: 'H3 - Important', value: 3},
+                  {title: 'H4 - Moderate', value: 4},
+                  {title: 'H5 - Less Important', value: 5},
+                  {title: 'H6 - Least Important', value: 6}
+                ]
+              }
+            },
+            {
+              name: 'text',
+              type: 'string',
+              title: 'Header Text',
+              description: 'The text content for this SEO header. Include relevant keywords for better SEO.',
+              validation: Rule => Rule.required().max(200)
+            }
+          ],
+          preview: {
+            select: {
+              title: 'text',
+              level: 'level'
+            },
+            prepare(selection) {
+              const {title, level} = selection
+              return {
+                title: `H${level}: ${title}`,
+                subtitle: `Header Level ${level}`
+              }
+            }
+          }
+        }
+      ],
+      options: {
+        sortable: true
+      }
     }
   ]
 }
