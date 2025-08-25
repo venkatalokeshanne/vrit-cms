@@ -187,7 +187,7 @@ export default {
               type: 'string',
               title: 'Header Text',
               description: 'The text content for this SEO header. Include relevant keywords for better SEO.',
-              validation: Rule => Rule.required().max(200)
+              validation: Rule => Rule.required()
             }
           ],
           preview: {
