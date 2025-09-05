@@ -225,6 +225,58 @@ export default {
           }
         },
         {
+          name: 'seoHeadings',
+          title: 'SEO Headings',
+          type: 'array',
+          description: 'Hidden headings for SEO purposes - Add multiple headings as needed',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  name: 'level',
+                  title: 'Heading Level',
+                  type: 'string',
+                  options: {
+                    list: [
+                      {title: 'H1', value: 'h1'},
+                      {title: 'H2', value: 'h2'},
+                      {title: 'H3', value: 'h3'},
+                      {title: 'H4', value: 'h4'},
+                      {title: 'H5', value: 'h5'},
+                      {title: 'H6', value: 'h6'}
+                    ]
+                  },
+                  validation: Rule => Rule.required()
+                },
+                {
+                  name: 'text',
+                  title: 'Heading Text',
+                  type: 'string',
+                  validation: Rule => Rule.required()
+                }
+              ],
+              preview: {
+                select: {
+                  title: 'text',
+                  subtitle: 'level'
+                },
+                prepare(selection) {
+                  const {title, subtitle} = selection;
+                  return {
+                    title: title,
+                    subtitle: subtitle?.toUpperCase()
+                  };
+                }
+              }
+            }
+          ],
+          options: {
+            collapsible: true,
+            collapsed: true
+          }
+        },
+        {
           name: 'structuredData',
           title: 'Structured Data',
           type: 'object',
