@@ -1,0 +1,247 @@
+{
+  "_type": "awsCourse",
+  "title": "AWS Cloud Fundamentals",
+  "subtitle": "Master the foundational concepts of Amazon Web Services and build your cloud computing expertise from the ground up.",
+  "slug": {
+    "current": "aws-cloud-fundamentals",
+    "_type": "slug"
+  },
+  "badge": {
+    "text": "Most Popular Course",
+    "color": "blue"
+  },
+  "overview": {
+    "description": [
+      "This comprehensive course is designed for beginners who want to understand cloud computing fundamentals and gain hands-on experience with AWS core services. You'll learn essential concepts, best practices, and practical skills needed to work with AWS in real-world scenarios.",
+      "By the end of this course, you'll be confident in deploying, managing, and optimizing AWS resources, and you'll be well-prepared for AWS certification exams."
+    ],
+    "achievements": [
+      {
+        "icon": "🎯",
+        "text": "Build and deploy applications on AWS"
+      },
+      {
+        "icon": "🛡️",
+        "text": "Implement security best practices"
+      },
+      {
+        "icon": "📊",
+        "text": "Monitor and optimize AWS costs"
+      },
+      {
+        "icon": "🏆",
+        "text": "Prepare for AWS certification"
+      }
+    ],
+    "duration": "8 weeks",
+    "level": "beginner"
+  },
+  "curriculum": [
+    {
+      "moduleNumber": 1,
+      "title": "Cloud Computing Basics",
+      "description": "Foundation knowledge of cloud computing and AWS fundamentals",
+      "topics": [
+        "Introduction to Cloud Computing",
+        "AWS Global Infrastructure",
+        "AWS Management Console",
+        "AWS CLI Setup & Configuration",
+        "AWS Account & Billing Overview"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 2,
+      "title": "Identity & Access Management",
+      "description": "Security and access control in AWS",
+      "topics": [
+        "IAM Users, Groups, and Roles",
+        "IAM Policies and Permissions",
+        "Multi-Factor Authentication",
+        "AWS Organizations",
+        "Security Best Practices"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 3,
+      "title": "Compute Services",
+      "description": "AWS compute services and instance management",
+      "topics": [
+        "EC2 Instances and Instance Types",
+        "AMIs and User Data",
+        "Security Groups and Key Pairs",
+        "Elastic Load Balancing",
+        "Auto Scaling Groups"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 4,
+      "title": "Storage Services",
+      "description": "AWS storage solutions and data management",
+      "topics": [
+        "S3 Buckets and Objects",
+        "S3 Storage Classes",
+        "EBS Volumes and Snapshots",
+        "EFS - Elastic File System",
+        "Storage Gateway"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 5,
+      "title": "Networking",
+      "description": "AWS networking services and VPC configuration",
+      "topics": [
+        "VPC - Virtual Private Cloud",
+        "Subnets and Route Tables",
+        "Internet and NAT Gateways",
+        "VPC Peering and Transit Gateway",
+        "CloudFront CDN"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 6,
+      "title": "Database Services",
+      "description": "AWS database services and data storage",
+      "topics": [
+        "RDS - Relational Database Service",
+        "DynamoDB - NoSQL Database",
+        "ElastiCache for Caching",
+        "Database Migration Service",
+        "Backup and Recovery"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 7,
+      "title": "Serverless Computing",
+      "description": "Serverless architecture and AWS Lambda",
+      "topics": [
+        "AWS Lambda Functions",
+        "API Gateway",
+        "EventBridge and SNS",
+        "SQS - Simple Queue Service",
+        "Serverless Architecture Patterns"
+      ],
+      "duration": "1 week"
+    },
+    {
+      "moduleNumber": 8,
+      "title": "Monitoring & Management",
+      "description": "AWS monitoring, management, and optimization",
+      "topics": [
+        "CloudWatch Metrics and Alarms",
+        "CloudTrail for Auditing",
+        "AWS Config for Compliance",
+        "Cost Optimization Strategies",
+        "Well-Architected Framework"
+      ],
+      "duration": "1 week"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Web Application Hosting",
+      "description": "Deploy a scalable web application using EC2, RDS, and ELB with proper security configurations.",
+      "keyFeatures": [
+        "Multi-tier architecture",
+        "Load balancing setup",
+        "Database configuration",
+        "Security group rules"
+      ],
+      "technologies": [
+        "EC2",
+        "RDS",
+        "ELB",
+        "Security Groups",
+        "VPC"
+      ]
+    },
+    {
+      "title": "Serverless API",
+      "description": "Build a serverless REST API using Lambda, API Gateway, and DynamoDB for a real-world application.",
+      "keyFeatures": [
+        "Lambda function development",
+        "API Gateway setup",
+        "DynamoDB integration",
+        "Authentication & authorization"
+      ],
+      "technologies": [
+        "AWS Lambda",
+        "API Gateway",
+        "DynamoDB",
+        "IAM",
+        "Cognito"
+      ]
+    },
+    {
+      "title": "Static Website with CDN",
+      "description": "Create a high-performance static website using S3, CloudFront, and Route 53 with custom domain.",
+      "keyFeatures": [
+        "S3 static hosting",
+        "CloudFront distribution",
+        "Custom domain setup",
+        "SSL certificate configuration"
+      ],
+      "technologies": [
+        "S3",
+        "CloudFront",
+        "Route 53",
+        "Certificate Manager"
+      ]
+    }
+  ],
+  "prerequisites": {
+    "requiredKnowledge": [
+      "Basic computer literacy",
+      "Understanding of internet concepts",
+      "Familiarity with operating systems",
+      "Basic networking concepts (helpful but not required)"
+    ],
+    "requirements": [
+      "Computer with internet connection",
+      "AWS account (we'll help you set up)",
+      "Willingness to learn and practice",
+      "Dedication to complete hands-on labs"
+    ]
+  },
+  "certifications": {
+    "preparesFor": [
+      "AWS Certified Cloud Practitioner",
+      "AWS Certified Solutions Architect - Associate"
+    ],
+    "certificateProvided": true
+  },
+  "enrollment": {
+    "price": 499,
+    "discountPrice": 399,
+    "enrollmentText": "Enroll in AWS Cloud Fundamentals",
+    "ctaTitle": "Ready to Start Your AWS Journey?",
+    "ctaDescription": "Join hundreds of students who have successfully launched their cloud careers with this course."
+  },
+  "seo": {
+    "title": "AWS Cloud Fundamentals Course - Master AWS from Basics | VR IT Training",
+    "description": "Learn AWS Cloud Fundamentals with hands-on projects. Master EC2, S3, RDS, Lambda & more. Perfect for beginners. Get AWS certified with expert guidance.",
+    "keywords": "AWS training, cloud computing course, AWS fundamentals, AWS certification, cloud practitioner, AWS tutorial, serverless computing",
+    "ogTitle": "AWS Cloud Fundamentals - Complete Beginner's Course",
+    "ogDescription": "Master Amazon Web Services from ground up. Hands-on projects, expert guidance, certification preparation. Start your cloud career today!",
+    "twitterTitle": "AWS Cloud Fundamentals Course - Learn AWS from Scratch",
+    "twitterDescription": "Comprehensive AWS course for beginners. Learn cloud computing, get hands-on experience, prepare for certification.",
+    "noIndex": false
+  },
+  "status": "published",
+  "featured": true,
+  "tags": [
+    "AWS",
+    "Cloud Computing",
+    "DevOps",
+    "Serverless",
+    "Certification",
+    "Beginner Friendly"
+  ],
+  "createdAt": "2025-09-05T12:00:00.000Z",
+  "updatedAt": "2025-09-05T12:00:00.000Z"
+}
